@@ -4,8 +4,8 @@ using UnityEngine.UI;
 public class TileData : MonoBehaviour
 {
     [SerializeField] TileColor tileColor;
-    //Sprite tileSprite;
     [SerializeField] Image tileImage;
+    [SerializeField] Sprite[] tileSprites;
 
     private void Start() {
         tileColor = (TileColor) Random.Range(0, 3);
@@ -15,9 +15,9 @@ public class TileData : MonoBehaviour
     void TileColoring() {
         tileImage = GetComponent<Image>();
         switch (tileColor) {
-            case TileColor.Red: tileImage.color = Color.red; break;
-            case TileColor.Green: tileImage.color = Color.green; break;
-            case TileColor.Blue: tileImage.color = Color.blue; break;
+            case TileColor.Red: tileImage.color = Color.red; tileImage.sprite = tileSprites[0]; break;
+            case TileColor.Green: tileImage.color = Color.green; tileImage.sprite = tileSprites[1]; break;
+            case TileColor.Blue: tileImage.color = Color.blue; tileImage.sprite = tileSprites[2]; break;
             default: tileImage.color = Color.black; break;
         }
     }

@@ -249,7 +249,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 5
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: D:/Documents/Development/Sisifus/lfx.keystore
+  AndroidKeystoreName: D:/Documents/Development/SisifusOnline/lfx.keystore
   AndroidKeyaliasName: lfx
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 1

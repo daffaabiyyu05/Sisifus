@@ -15,6 +15,10 @@ public class Timer : MonoBehaviour
         OnGameEnd += DebugGameEnd;
     }
 
+    public void SetTimer(float duration) {
+        timer = duration;
+    }
+
     void DebugGameEnd() {
         Debug.Log("Game Ends");
     }

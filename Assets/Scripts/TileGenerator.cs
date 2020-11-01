@@ -6,6 +6,8 @@ public class TileGenerator : MonoBehaviour
     [SerializeField] GameObject tileObject;
     [SerializeField] Vector2 startPoint;
     [SerializeField] Vector2 stepPoint;
+    [SerializeField] Vector2 targetPoint;
+    [SerializeField] float priorTargetY;
     public int tileOnScreen;
 
     public List<GameObject> GenerateTiles() {
@@ -15,6 +17,9 @@ public class TileGenerator : MonoBehaviour
         for (i = 0; i < tileOnScreen; i++) {
             createdTile = Instantiate(tileObject, transform).GetComponent<RectTransform>();
             createdTile.localPosition = startPoint + stepPoint * i;
+            if (i == 1) {
+                createdTile.localPosition = targetPoint;
+            }
             gameObjects.Add(createdTile.gameObject);
         }
         return gameObjects;
@@ -41,5 +46,15 @@ public class TileGenerator : MonoBehaviour
             Vector2 localPosCast = tileTransform.localPosition;
             tileTransform.localPosition = localPosCast + stepPoint;
         }
+    }
+
+    public void UpdateTileTarget(GameObject tileObject) {
+        RectTransform tileTransform = tileObject.GetComponent<RectTransform>();
+        tileTransform.localPosition = targetPoint;
+    }
+
+    public void ResetY(GameObject tileObject) {
+        RectTransform tileTransform = tileObject.GetComponent<RectTransform>();
+        tileTransform.localPosition = new Vector2(tileTransform.localPosition.x, priorTargetY);
     }
 }
