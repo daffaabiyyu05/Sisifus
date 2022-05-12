@@ -11,4 +11,10 @@ public class StartGame : MonoBehaviour
         startButton = GetComponent<Button>();
         startButton.onClick.AddListener(() => SendMessageUpwards("StartGame"));
     }
+
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Q)) {
+            SendMessageUpwards("StartGame");
+        }
+    }
 }

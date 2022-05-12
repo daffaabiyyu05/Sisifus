@@ -26,7 +26,9 @@ public class Timer : MonoBehaviour
     IEnumerator CountdownTimer() {
         yield return new WaitForSeconds(delay);
         timer -= delay;
-        textMeshPro.text = (int) timer + "s";
+        if (textMeshPro != null) {
+            textMeshPro.text = (int)timer + "s";
+        }
         if (timer <= 0) {
             OnGameEnd();
         }

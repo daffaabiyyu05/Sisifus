@@ -6,6 +6,7 @@ public class Main : MonoBehaviour
 {
     [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject gameplay;
+    [SerializeField] GameObject credits;
     GameObject activeScene;
 
     private void Start() {
@@ -15,5 +16,15 @@ public class Main : MonoBehaviour
     void StartGame() {
         Destroy(activeScene);
         activeScene = Instantiate(gameplay, this.transform);
+    }
+
+    void MainMenu() {
+        Destroy(activeScene);
+        activeScene = Instantiate(mainMenu, this.transform);
+    }
+
+    void Credits() {
+        Destroy(activeScene);
+        activeScene = Instantiate(credits, this.transform);
     }
 }

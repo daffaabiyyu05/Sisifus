@@ -15,10 +15,10 @@ public class TileData : MonoBehaviour
     void TileColoring() {
         tileImage = GetComponent<Image>();
         switch (tileColor) {
-            case TileColor.Red: tileImage.color = Color.red; tileImage.sprite = tileSprites[0]; break;
-            case TileColor.Green: tileImage.color = Color.green; tileImage.sprite = tileSprites[1]; break;
-            case TileColor.Blue: tileImage.color = Color.blue; tileImage.sprite = tileSprites[2]; break;
-            default: tileImage.color = Color.black; break;
+            case TileColor.Red: tileImage.color = Color.white; tileImage.sprite = tileSprites[0]; break;
+            case TileColor.Green: tileImage.color = Color.white; tileImage.sprite = tileSprites[1]; break;
+            case TileColor.Blue: tileImage.color = Color.white; tileImage.sprite = tileSprites[2]; break;
+            default: tileImage.color = Color.white; break;
         }
     }
     
