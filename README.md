@@ -1,2 +1,2 @@
-# sisifus
+# Sisifus
 Sisifus Source Code
