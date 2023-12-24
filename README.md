@@ -39,11 +39,11 @@ Pemilihan platform mobile bertujuan agar gim bisa mencapai lebih banyak gamer ka
 
 # Tim Kami
 
--Designer- 
+-Designer-  
 M Hildi Radya Nararya
 
--Programmer-
+-Programmer-  
 Daffa Abiyyu
 
--Artist-
+-Artist-  
 Rifhani Rahman
